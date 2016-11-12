@@ -1,0 +1,448 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="John Doe">
+    
+
+    
+    <meta name="description" content="ʹ��mfg tool��дandroid5.1�ľ���֮������ʹ�þɰ���mfg tool��дlinux����android���񣬶����������������������е�uboot����android5.1�汾��uboot��
+�ο�����http://www.itdadao.com/articles/c15a39492p0.html
+http://www.cnb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/11/12/emmc boot1 boot2 partition/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ʹ��mfg tool��дandroid5.1�ľ���֮������ʹ�þɰ���mfg tool��дlinux����android���񣬶����������������������е�uboot����android5.1�汾��uboot��
+�ο�����http://www.itdadao.com/articles/c15a39492p0.html
+http://www.cnb">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/745188/201611/745188-20161111105215624-775600562.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/745188/201611/745188-20161111105235405-155711438.png">
+<meta property="og:updated_time" content="2016-11-12T14:41:49.738Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="ʹ��mfg tool��дandroid5.1�ľ���֮������ʹ�þɰ���mfg tool��дlinux����android���񣬶����������������������е�uboot����android5.1�汾��uboot��
+�ο�����http://www.itdadao.com/articles/c15a39492p0.html
+http://www.cnb">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/745188/201611/745188-20161111105215624-775600562.png">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Hexo" title="Hexo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/12/emmc boot1 boot2 partition/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
+		
+  <p class="article-time">
+    <time datetime="2016-11-12T14:41:49.738Z" itemprop="datePublished"> Published 2016-11-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#�ο�����"><span class="toc-number">1.</span> <span class="toc-text">�ο�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emmc-boot����"><span class="toc-number">2.</span> <span class="toc-text">emmc boot����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emmc-boot�J���"><span class="toc-number">3.</span> <span class="toc-text">emmc boot�Ĵ���</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#��������"><span class="toc-number">4.</span> <span class="toc-text">��������</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Author"><span class="toc-number">5.</span> <span class="toc-text">Author</span></a></li></ol>
+		
+		</div>
+		
+		<p>ʹ��mfg tool��дandroid5.1�ľ���֮������ʹ�þɰ���mfg tool��дlinux����android���񣬶����������������������е�uboot����android5.1�汾��uboot��</p>
+<h4 id="�ο�����"><a href="#�ο�����" class="headerlink" title="�ο�����"></a>�ο�����</h4><p><a href="http://www.itdadao.com/articles/c15a39492p0.html" target="_blank" rel="external">http://www.itdadao.com/articles/c15a39492p0.html</a></p>
+<p><a href="http://www.cnblogs.com/heiyue/p/5199851.html#undefined" target="_blank" rel="external">http://www.cnblogs.com/heiyue/p/5199851.html#undefined</a></p>
+<p><a href="http://www.cnblogs.com/heiyue/p/5830505.html" target="_blank" rel="external">http://www.cnblogs.com/heiyue/p/5830505.html</a></p>
+<p><a href="https://linux.codingbelief.com/zh/storage/flash_memory/emmc/emmc_partitions.html" target="_blank" rel="external">https://linux.codingbelief.com/zh/storage/flash_memory/emmc/emmc_partitions.html</a></p>
+<p><a href="https://community.nxp.com/thread/331306" target="_blank" rel="external">https://community.nxp.com/thread/331306</a></p>
+<p><a href="https://freescale.jiveon.com/thread/429311" target="_blank" rel="external">https://freescale.jiveon.com/thread/429311</a></p>
+<p><a href="http://blog.5ibc.net/p/80599.html" target="_blank" rel="external">http://blog.5ibc.net/p/80599.html</a></p>
+<h4 id="emmc-boot����"><a href="#emmc-boot����" class="headerlink" title="emmc boot����"></a>emmc boot����</h4><p>��ͬ�µİ����²�֪��emmc��boot1��boot2�Լ�RPMB(Replay Protected Memory Block),GPAP(General Purpose Area Partitions,����������4��)��UDA��User Data Area)������������һ��ֻ֪��UDA������</p>
+<p>����ͨ����emmc���з�����Ҳֻ�Ƕ�UDA������boot1,boot2,RPMB�����ǹ̶��ģ����ǲ����ܿ�������С�ͷ�����ʽ������ͼ��ʾ��ͼƬժ�����磩��</p>
+<p><img src="http://images2015.cnblogs.com/blog/745188/201611/745188-20161111105215624-775600562.png" alt=""></p>
+<p>���ε�android5.1������uboot��д����boot1���������ҽ�boot1����ʹ�ܡ���ôemmcÿ������֮���ʹ�boot1��������������android5.1��uboot����android5.1��uboot���Ҳ�������Ӧ��kernel�Ⱦ�������ΪUDA�������ľ����Ѿ���д�ɱ��İ汾�������Ծ�һֱ����������ҳ�档 </p>
+<p>����д��emmc�Ĵ����е�ֵ��һֱ������,������Ϊ�����ͻָ�ΪĬ��ֵ��</p>
+<p>��ԭ���Ĺ����ǽ�uboot����UDA������</p>
+<p>android5.1��mfg tool�У�ucl2.xml����ôһ�Ρ�(��������ע��)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- ʹemmc��boot0������Ϊ�ɶ�д --&gt;</div><div class="line">	&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ echo 0 &gt; /sys/block/mmcblk%mmc%boot0/force_ro&quot;&gt;access boot partition 1&lt;/CMD&gt;</div><div class="line">	&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;send&quot; file=&quot;files/android/%folder%/u-boot-imx%soc%%plus%.imx&quot; &gt;Sending u-boot.bin&lt;/CMD&gt;</div><div class="line">&lt;!-- ��uboot��¼��emmc��boot0����,��ϵͳ�̷��������������Ǵ�0��ʼ��Ҳ����boot0, boot1 --&gt;</div><div class="line">	&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ dd if=$FILE of=/dev/mmcblk%mmc%boot0 bs=512 seek=2&quot;&gt;write U-Boot to sd card&lt;/CMD&gt;</div><div class="line">&lt;!-- ʹemmc��boot0������Ϊֻ�� --&gt;</div><div class="line">	&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ echo 1 &gt; /sys/block/mmcblk%mmc%boot0/force_ro&quot;&gt; re-enable read-only access &lt;/CMD&gt;</div><div class="line">&lt;!-- ��boot0����ʹ�ܣ���ô������ʱ���ͻ���boot1��������,</div><div class="line">     emmc�Ĵ��������Ǵ�1��ʼ,boot1,boot2.������enable 1ָ����emmc boot�����ĵ�һ������,������emmc�ļĴ������Եġ�</div><div class="line">     ��������/sys/block/mmcblk3boot0ָ������linuxϵͳ���Եģ���ʵָ�Ķ���ͳһ������������emmc boot���ʼ�ķ����� </div><div class="line">--&gt;</div><div class="line">	&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ mmc bootpart enable 1 1 /dev/mmcblk%mmc%&quot;&gt;enable boot partion 1 to boot&lt;/CMD&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="emmc-boot�J���"><a href="#emmc-boot�J���" class="headerlink" title="emmc boot�Ĵ���"></a>emmc boot�Ĵ���</h4><p>��ͼ��emmc�Ĵ������á�</p>
+<p>��ʹ����������BOOT_PARTITION_ENABLE����Ϊ0��</p>
+<p>ʹ��boot1����BOOT_PARTITION_ENABLE����Ϊ1��</p>
+<p>ʹ��boot2����BOOT_PARTITION_ENABLE����Ϊ2��</p>
+<p>ʹ��UDA����BOOT_PARTITION_ENABLE����Ϊ7.</p>
+<p><img src="http://images2015.cnblogs.com/blog/745188/201611/745188-20161111105235405-155711438.png" alt=""></p>
+<h4 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h4><p>��uboot����emmc�����������emmc�ļĴ�����uboot�汾��ͬ��������Щ��һ����<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">          FSL 2009.08 U-boot       u-boot-fslc branch patches-2014.07</div><div class="line">args      mmc bootpart             mmc partconf dev boot_ack boot_partition partition_access</div><div class="line"></div><div class="line">example for change boot partition to device 2 partition 1:</div><div class="line">            mmc bootpart 2 1        mmc partconf 2 1 1 1</div><div class="line"></div><div class="line">example for change boot partition to device 2 partition 0:</div><div class="line">            mmc bootpart 2 0        mmc partconf 2 1 0 1</div></pre></td></tr></table></figure></p>
+<p>�����������£�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"># uboot�����Ȳ鿴emmc�ı���</div><div class="line">Tony&gt; mmc list</div><div class="line">FSL_SDHC: 0</div><div class="line">FSL_SDHC: 1</div><div class="line">FSL_SDHC: 2 (eMMC)</div><div class="line"># ȷ��emmc��������2</div><div class="line"># �鿴emmc����</div><div class="line">Tony&gt; mmc</div><div class="line">mmc - MMC sub system</div><div class="line">Usage:</div><div class="line">mmc info - display info of the current MMC device</div><div class="line">mmc read addr blk# cnt</div><div class="line">mmc write addr blk# cnt</div><div class="line">mmc erase blk# cnt</div><div class="line">mmc rescan</div><div class="line">mmc part - lists available partition on current mmc device</div><div class="line">mmc dev [dev] [part] - show or set current mmc device [partition]</div><div class="line">mmc list - lists available devices</div><div class="line">mmc hwpartition [args...] - does hardware partitioning</div><div class="line">  arguments (sizes in 512-byte blocks):</div><div class="line">    [user [enh start cnt] [wrrel &#123;on|off&#125;]] - sets user data area attributes</div><div class="line">    [gp1|gp2|gp3|gp4 cnt [enh] [wrrel &#123;on|off&#125;]] - general purpose partition</div><div class="line">    [check|set|complete] - mode, complete set partitioning completed</div><div class="line">  WARNING: Partitioning is a write-once setting once it is set to complete.</div><div class="line">  Power cycling is required to initialize partitions after set to complete.</div><div class="line">mmc bootbus dev boot_bus_width reset_boot_bus_width boot_mode</div><div class="line"> - Set the BOOT_BUS_WIDTH field of the specified device</div><div class="line">mmc bootpart-resize &lt;dev&gt; &lt;boot part size MB&gt; &lt;RPMB part size MB&gt;</div><div class="line"> - Change sizes of boot and RPMB partitions of specified device</div><div class="line">mmc partconf dev boot_ack boot_partition partition_access</div><div class="line"> - Change the bits of the PARTITION_CONFIG field of the specified device</div><div class="line">mmc rst-function dev value</div><div class="line"> - Change the RST_n_FUNCTION field of the specified device</div><div class="line">   WARNING: This is a write-once field and 0 / 1 / 2 are the only valid values.</div><div class="line">mmc setdsr &lt;value&gt; - set DSR register value</div><div class="line"></div><div class="line"># ����emmc��������������Ҫ��partconf�����ĵ�һ���͵�����������</div><div class="line"># 2��emmc�ı��ţ��������������������ķ�������Ӧ�Ĵ���BOOT_PARTITION_ENABLE�ֶΡ���Ϊ0��ʾ��ʹ�ܡ� </div><div class="line">Tony&gt; mmc partconf 2 0 0 0</div><div class="line"># ��������Ϊ7��ʾ��UDA����, 0��7�Ҷ������ˣ���¼ԭ���ľ������ܹ������ɹ���</div><div class="line">Tony&gt; mmc partconf 2 0 7 0</div></pre></td></tr></table></figure>
+<p>���߸���ucl2.xml�ļ���ʹ��UDA������<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- �������ó�0ʱ����¼��������֪��Ϊʲô --&gt;</div><div class="line">&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ mmc bootpart enable 0 1 /dev/mmcblk%mmc%&quot;&gt;enable boot partion 1 to boot&lt;/CMD&gt;</div><div class="line">����</div><div class="line">&lt;!-- ���ó�7����¼�ɹ�������¼ԭ����ϵͳ������������ --&gt;</div><div class="line">&lt;CMD state=&quot;Updater&quot; type=&quot;push&quot; body=&quot;$ mmc bootpart enable 7 1 /dev/mmcblk%mmc%&quot;&gt;enable boot partion 1 to boot&lt;/CMD&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="Author"><a href="#Author" class="headerlink" title="Author"></a>Author</h4><p>Tony Liu </p>
+<p>2016-11-11, Shenzhen</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/11/12/emmc boot1 boot2 partition/" data-title="Hexo" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/11/12/hexo搭建博客/"  title="">
+ <strong>下一篇：</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#�ο�����"><span class="toc-number">1.</span> <span class="toc-text">�ο�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emmc-boot����"><span class="toc-number">2.</span> <span class="toc-text">emmc boot����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emmc-boot�J���"><span class="toc-number">3.</span> <span class="toc-text">emmc boot�Ĵ���</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#��������"><span class="toc-number">4.</span> <span class="toc-text">��������</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Author"><span class="toc-number">5.</span> <span class="toc-text">Author</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/helloworldtoyou/" target="_blank" title="Tony&#39;s Blog">Tony&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="undefined" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tony. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="John Doe">John Doe</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
