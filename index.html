@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   
     <!-- <title>Hexo</title> -->
-    <title>Tony&#39;s Blog</title>
+    <title>"Tony's Blog"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Doe">
@@ -43,7 +43,7 @@
 				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -59,7 +59,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -74,13 +74,15 @@
   
 <section class="post" itemscope itemprop="blogitem">
   
-    <a href="/2016/11/14/emmc_boot1_boot2_partition/" title="emmc boot1 boot2 partition" itemprop="url">
+    <a href="/2016/11/14/linuxSPI设备节点读写/" title="linux SPI设备节点读写" itemprop="url">
   
-    <h1 itemprop="name">emmc boot1 boot2 partition</h1>
+    <h1 itemprop="name">linux SPI设备节点读写</h1>
     
      
-           <p itemprop="description" >使用mfg tool烧写android5.1的镜像之后，再使用旧版的mfg tool烧写linux或者android镜像，都不能正常启动，而且运行的uboot还是android5.1版本的uboot。
-参考链接http://www.itdadao.com/articles/c15</p>
+           <p itemprop="description" >本文记录spi设备节点的操作方法。
+SPI总线设备文件名通常为/dev/spidevN.P（N=0、1、2……，P=0、1、2……），
+其中N表示第几路SPI总线，而P表示在该路SPI总线中使用哪个CS信号线。
+参考链接：　　http://www.wzaobao.com/p/l5</p>
         
     
     <time datetime="2016-11-14T15:29:25.000Z" itemprop="datePublished">2016-11-14</time>
@@ -119,15 +121,13 @@ hexo搭建方法:
   
 <section class="post" itemscope itemprop="blogitem">
   
-    <a href="/2016/11/14/linuxSPI设备节点读写/" title="linux SPI设备节点读写" itemprop="url">
+    <a href="/2016/11/14/emmc_boot1_boot2_partition/" title="emmc boot1 boot2 partition" itemprop="url">
   
-    <h1 itemprop="name">linux SPI设备节点读写</h1>
+    <h1 itemprop="name">emmc boot1 boot2 partition</h1>
     
      
-           <p itemprop="description" >本文记录spi设备节点的操作方法。
-SPI总线设备文件名通常为/dev/spidevN.P（N=0、1、2……，P=0、1、2……），
-其中N表示第几路SPI总线，而P表示在该路SPI总线中使用哪个CS信号线。
-参考链接：　　http://www.wzaobao.com/p/l5</p>
+           <p itemprop="description" >使用mfg tool烧写android5.1的镜像之后，再使用旧版的mfg tool烧写linux或者android镜像，都不能正常启动，而且运行的uboot还是android5.1版本的uboot。
+参考链接http://www.itdadao.com/articles/c15</p>
         
     
     <time datetime="2016-11-14T15:29:25.000Z" itemprop="datePublished">2016-11-14</time>
@@ -161,10 +161,10 @@ SPI总线设备文件名通常为/dev/spidevN.P（N=0、1、2……，P=0、1、
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -175,7 +175,7 @@ SPI总线设备文件名通常为/dev/spidevN.P（N=0、1、2……，P=0、1、
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -191,7 +191,7 @@ SPI总线设备文件名通常为/dev/spidevN.P（N=0、1、2……，P=0、1、
 
 
   <div class="rsspart">
-	<a href="undefined" target="_blank" title="rss">RSS 订阅</a>
+	<a href="undefined" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -323,7 +323,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
